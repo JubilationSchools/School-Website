@@ -28,14 +28,47 @@ nav ul li a {
   margin: auto;
 }
 .intro {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px 0;
+  background-color: #333; /* Dark background */
+  color: #fff;            /* White text for contrast */
+  padding: 50px 0;        /* Adds spacing to the section */
+  text-align: center;     /* Centers the text */
+  position: relative;     /* Allows positioning of overlay elements */
+}
+.intro-image {
+  position: relative;
+  overflow: hidden;
 }
 .intro-text h2 {
   font-size: 2.5em;
   color: #ff9800;
+}
+.intro-image img {
+  width: 80%;            /* Adjusts the width */
+    max-width: 600px;      /* Maximum width */
+    height: auto;          /* Keeps aspect ratio */
+    margin: 0 auto;        /* Centers the image */
+    display: block;
+    border-radius: 8px;    /* Slightly rounded corners for a modern look */
+    object-fit: cover;     /* Ensures the image fills the space without distortion */
+}
+/* Attractive Button Style */
+.intro-text button {
+  background-color: #ff9800; /* Bright orange button */
+  color: #fff;               /* White text */
+  border: none;
+  padding: 15px 30px;        /* Spacing inside the button */
+  font-size: 1.2em;          /* Makes the text bigger */
+  border-radius: 25px;       /* Fully rounded corners */
+  cursor: pointer;           /* Hand cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  margin-top: 20px;          /* Adds space above the button */
+  margin-bottom: 20px;
+}
+
+.intro-text button:hover {
+  background-color: #e67e22; /* Darker shade on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 .why-us {
   background-color: #fff3e0;
