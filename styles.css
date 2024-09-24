@@ -24,7 +24,7 @@ nav ul li a {
   text-decoration: none;
 }
 .container {
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 .intro {
@@ -34,22 +34,38 @@ nav ul li a {
   text-align: center;     /* Centers the text */
   position: relative;     /* Allows positioning of overlay elements */
 }
-.intro-image {
+/* YouTube Video Section Styling */
+.intro-video {
   position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio for video */
+  margin: 20px auto;
+  width: 80%;          /* Adjusts the width of the video container */
+  max-width: 800px;    /* Sets a maximum width for large screens */
   overflow: hidden;
+  border-radius: 8px;  /* Rounded corners for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+}
+/* Responsive Intro-Text and Intro-Video */
+.intro-text {
+  margin-bottom: 30px; /* Adds spacing between text and video */
+  padding: 0 20px;     /* Add padding for small screens */
+  line-height: 1.6;    /* Improved readability */
+}
+.intro-text p {
+  font-size: 1.2em;    /* Slightly larger font size for desktop */
+  margin-bottom: 20px; /* Adds space under the paragraph */
 }
 .intro-text h2 {
   font-size: 2.5em;
   color: #ff9800;
 }
-.intro-image img {
-  width: 80%;            /* Adjusts the width */
-    max-width: 600px;      /* Maximum width */
-    height: auto;          /* Keeps aspect ratio */
-    margin: 0 auto;        /* Centers the image */
-    display: block;
-    border-radius: 8px;    /* Slightly rounded corners for a modern look */
-    object-fit: cover;     /* Ensures the image fills the space without distortion */
+.intro-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;        /* Ensures the video fills the entire container */
+  height: 100%;       /* Ensures the video fills the entire container */
+  border: none;       /* Removes the iframe border */
 }
 /* Attractive Button Style */
 .intro-text button {
@@ -70,10 +86,173 @@ nav ul li a {
   background-color: #e67e22; /* Darker shade on hover */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
-.why-us {
-  background-color: #fff3e0;
-  padding: 30px 0;
+
+/*-------------------------------*/
+/* #about Section Styles */
+/* #about Section Styles */
+#about {
+  background-color: #f5f5f5; /* Soft light gray background for subtle contrast */
+  padding: 70px 0; /* Spacing around the section */
+  text-align: center; /* Center-align all content */
+  color: #333; /* Darker text color for readability */
 }
+
+#about h2 {
+  font-size: 2.8em; /* Larger heading */
+  color: #ff9800; /* Bright orange to match school colors */
+  margin-bottom: 30px; /* Space below the heading */
+  font-weight: bold; /* Strong heading for emphasis */
+}
+
+#about p {
+  font-size: 1.2em; /* Larger text for better readability */
+  color: #555; /* Softer gray text */
+  max-width: 800px; /* Prevents text from stretching too wide */
+  margin: 0 auto 40px; /* Centers text and adds space */
+  line-height: 1.7; /* Improves text readability */
+}
+
+/* Sub-sections (Vision, Mission, Values) */
+#about .about-subsection {
+  margin-bottom: 50px; /* Adds spacing between subsections */
+}
+
+#about .about-subsection h3 {
+  font-size: 1.8em; /* Slightly smaller subheadings */
+  color: #ff9800; /* Complementary orange */
+  margin-bottom: 20px;
+  font-weight: 600; /* Semi-bold for subheadings */
+}
+
+#about .about-subsection p {
+  font-size: 1.1em;
+  color: #666; /* Dark gray for easy reading */
+  line-height: 1.6; /* Makes text more readable */
+  max-width: 750px;
+  margin: 0 auto; /* Centers the text in each subsection */
+}
+
+/* Values Section - Cards Layout */
+#about .about-values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Adds spacing between the cards */
+  margin-top: 40px;
+}
+
+#about .about-value-item {
+  background-color: #fff; /* White background for contrast with gray */
+  border: 1px solid #eee; /* Soft border around the cards */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners for a modern look */
+  width: 300px; /* Card width for desktop screens */
+  text-align: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+#about .about-value-item:hover {
+  transform: translateY(-5px); /* Hover effect for slight lift */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+#about .about-value-item h4 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #ff9800; /* Bright orange color */
+  font-weight: 600; /* Bold subheadings */
+}
+
+#about .about-value-item p {
+  font-size: 1.05em;
+  color: #555; /* Subtle gray text */
+  line-height: 1.6;
+}
+/*-------------------------------*/
+
+/*-------------------------------*/
+/* Why Us Section Styles */
+#why-us {
+  background-color: #e0f7fa; /* Light bluish background that pairs well with orange */
+  padding: 80px 0; /* Generous padding for spacing */
+  text-align: center;
+  color: #333; /* Dark text for readability */
+}
+
+#why-us h2 {
+  font-size: 2.8em; /* Large and attention-grabbing */
+  color: #ff9800; /* Bright orange for headings */
+  margin-bottom: 30px; /* Space below the heading */
+  font-weight: bold; /* Strong emphasis */
+}
+
+#why-us p {
+  font-size: 1.2em; /* Larger body text */
+  color: #555; /* Softer gray for readable text */
+  max-width: 900px;
+  margin: 0 auto 50px; /* Centering text and spacing */
+  line-height: 1.8; /* Improved readability */
+}
+
+/* Sub-sections (What We Offer, Transport, Menu) */
+#why-us .why-us-subsection {
+  margin-bottom: 60px; /* Spacing between sections */
+}
+
+#why-us .why-us-subsection h3 {
+  font-size: 1.8em; /* Subheadings slightly smaller */
+  color: #00796b; /* Darker teal for a balanced, bluish tone */
+  margin-bottom: 20px;
+  font-weight: 600; /* Semi-bold for emphasis */
+}
+
+#why-us .why-us-subsection p {
+  font-size: 1.1em;
+  color: #666; /* Subtle gray for readability */
+  max-width: 800px;
+  margin: 0 auto; /* Center text */
+  line-height: 1.7;
+}
+
+/* Icon or Image Section (Optional) */
+#why-us .why-us-icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+#why-us .icon-box {
+  background-color: #fff; /* White background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#why-us .icon-box:hover {
+  transform: translateY(-5px); /* Hover effect for interactivity */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+#why-us .icon-box h4 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #ff9800; /* Bright orange for headings */
+  font-weight: 600;
+}
+
+#why-us .icon-box p {
+  font-size: 1.05em;
+  color: #555; /* Soft gray text */
+  line-height: 1.6;
+}
+/*-------------------------------*/
+
 .offer-content {
   display: flex;
   justify-content: space-between;
@@ -104,5 +283,73 @@ footer {
   .offer-content article {
       width: 100%;
       margin-bottom: 20px;
+  }
+  .intro {
+    padding: 30px 0; /* Reduced padding for smaller screens */
+  }
+
+  .intro-text h2 {
+    font-size: 1.8em; /* Smaller font size for headings on mobile */
+  }
+
+  .intro-text p {
+    font-size: 1em;   /* Reduce paragraph font size for mobile */
+  }
+
+  .intro-video {
+    width: 100%;      /* Full width of the screen on mobile */
+    padding-top: 56.25%; /* Keeps the 16:9 ratio for the video */
+    max-width: none;   /* Removes max width so it can scale to full screen width */
+    border-radius: 0;  /* Remove the rounded corners on smaller devices for a simpler look */
+    box-shadow: none;  /* Remove shadow for a cleaner mobile design */
+  }
+
+  .intro-text button {
+    font-size: 1em;    /* Slightly smaller button text */
+    padding: 10px 20px; /* Reduce padding to fit smaller screens */
+    margin-top: 15px;   /* Adjust margin for better spacing */
+  }
+
+  #why-us h2 {
+    font-size: 2.2em; /* Smaller heading for mobile */
+  }
+
+  #why-us p {
+    font-size: 1.1em; /* Smaller text for mobile */
+  }
+
+  #why-us .why-us-icons {
+    flex-direction: column; /* Stack icons vertically */
+    gap: 20px; /* Smaller gap between elements */
+  }
+
+  #why-us .icon-box {
+    width: 90%; /* Full width on smaller screens */
+  }
+
+
+  #about h2 {
+    font-size: 2.2em; /* Reduce heading size for smaller screens */
+  }
+
+  #about p {
+    font-size: 1.1em; /* Slightly smaller paragraph text */
+  }
+
+  #about .about-values {
+    flex-direction: column; /* Stack value cards vertically */
+    gap: 20px; /* Smaller gap between stacked cards */
+  }
+
+  #about .about-value-item {
+    width: 90%; /* Full width for mobile devices */
+  }
+
+  #about .about-subsection h3 {
+    font-size: 1.6em; /* Smaller subheadings */
+  }
+
+  #about .about-subsection p {
+    font-size: 1em; /* Slightly smaller paragraph text */
   }
 }
