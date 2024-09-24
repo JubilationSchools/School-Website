@@ -253,26 +253,230 @@ nav ul li a {
 }
 /*-------------------------------*/
 
-.offer-content {
+/*-------------------------------*/
+/* Offer Section Styles */
+#offer {
+  background-color: #f9f5e1; /* Light beige background that integrates well with orange */
+  padding: 80px 20px; /* Generous padding for spacing */
+  text-align: center; /* Center-align all content */
+  color: #333; /* Darker text color for readability */
+}
+
+#offer h2 {
+  font-size: 2.8em; /* Large heading */
+  color: #ff9800; /* Bright orange for headings */
+  margin-bottom: 30px; /* Space below the heading */
+  font-weight: bold; /* Strong heading for emphasis */
+}
+
+#offer p {
+  font-size: 1.2em; /* Larger text for better readability */
+  color: #555; /* Softer gray for body text */
+  max-width: 900px; /* Prevents text from stretching too wide */
+  margin: 0 auto 50px; /* Centers text and adds space */
+  line-height: 1.7; /* Improves text readability */
+}
+
+/* Flexbox Layout for Offer Items */
+.offer-items {
   display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
+  justify-content: space-around; /* Space between items */
+  flex-wrap: wrap; /* Wrap items to next line */
+  max-width: 1200px; /* Maximum width for the layout */
+  margin: 0 auto; /* Centering the items */
 }
-.offer-content article {
-  width: 30%;
-  text-align: center;
+
+/* Individual Offer Item Styles */
+.offer-item {
+  background-color: #fff; /* White background for contrast */
+  border: 1px solid #e0e0e0; /* Soft border around items */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  padding: 30px; /* Internal spacing */
+  margin: 20px; /* Space around each item */
+  flex: 1; /* Allow items to grow */
+  max-width: 300px; /* Maximum width for each item */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animation on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
-.offer-content img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+
+.offer-item:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
 }
+
+.offer-item h3 {
+  font-size: 1.6em; /* Subheading size */
+  color: #ff9800; /* Bright orange for headings */
+  margin-bottom: 15px; /* Space below heading */
+  font-weight: bold; /* Strong emphasis */
+}
+
+.offer-item p {
+  font-size: 1.05em; /* Body text size */
+  color: #555; /* Soft gray text */
+  line-height: 1.6; /* Improved readability */
+}
+
+/* Images Area */
+.offer-images {
+  display: flex;
+  justify-content: center; /* Center the images */
+  flex-wrap: wrap; /* Allow images to wrap */
+  margin-top: 40px; /* Space above images area */
+}
+
+.offer-images img {
+  width: 250px; /* Fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px; /* Space around images */
+  border-radius: 8px; /* Rounded corners for images */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for images */
+}
+/*-------------------------------*/
+
+/*--------------------------------*/
+/* Contact Section Styles */
+#contact {
+  background-color: #f0f4f8; /* Light gray background that integrates well with yellow */
+  padding: 80px 20px; /* Generous padding for spacing */
+  text-align: center; /* Center-align all content */
+  color: #333; /* Darker text color for readability */
+}
+
+#contact h2 {
+  font-size: 2.8em; /* Large heading */
+  color: #ffeb3b; /* Bright yellow for headings */
+  margin-bottom: 30px; /* Space below the heading */
+  font-weight: bold; /* Strong heading for emphasis */
+}
+
+#contact p {
+  font-size: 1.2em; /* Larger text for better readability */
+  color: #555; /* Softer gray for body text */
+  max-width: 900px; /* Prevents text from stretching too wide */
+  margin: 0 auto 50px; /* Centers text and adds space */
+  line-height: 1.7; /* Improves text readability */
+}
+
+/* Contact Info Styles */
+.contact-info {
+  display: flex;
+  justify-content: space-around; /* Space between items */
+  flex-wrap: wrap; /* Allow items to wrap */
+  max-width: 1200px; /* Maximum width for the layout */
+  margin: 0 auto; /* Centering the items */
+}
+
+.contact-item {
+  background-color: #fff; /* White background for contrast */
+  border: 1px solid #e0e0e0; /* Soft border around items */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  padding: 30px; /* Internal spacing */
+  margin: 20px; /* Space around each item */
+  flex: 1; /* Allow items to grow */
+  max-width: 300px; /* Maximum width for each item */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animation on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.contact-item:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.contact-item h3 {
+  font-size: 1.6em; /* Subheading size */
+  color: #ffeb3b; /* Bright yellow for headings */
+  margin-bottom: 15px; /* Space below heading */
+  font-weight: bold; /* Strong emphasis */
+}
+
+.contact-item p {
+  font-size: 1.05em; /* Body text size */
+  color: #555; /* Soft gray text */
+  line-height: 1.6; /* Improved readability */
+}
+/*--------------------------------*/
+
+/*--------------------------------*/
+/* Footer Styles */
 footer {
-  background-color: #ff9800;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
+  background-color: #2c2c2c; /* Dark background for contrast */
+  padding: 60px 20px; /* Generous padding for spacing */
+  color: #fff; /* White text for readability */
+  text-align: center; /* Center-align the text */
 }
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-around; /* Space items across the footer */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  max-width: 1200px; /* Maximum width to prevent stretching */
+  margin: 0 auto; /* Center the content */
+}
+
+footer .footer-item {
+  margin: 20px 0; /* Space between footer items */
+  flex: 1; /* Make items flexible */
+  min-width: 200px; /* Minimum width for smaller screens */
+}
+
+footer .footer-item h4 {
+  font-size: 1.5em; /* Larger heading size */
+  color: #ff9800; /* Bright orange for headings */
+  margin-bottom: 20px; /* Space below headings */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+footer .footer-item p,
+footer .footer-item a {
+  color: #ddd; /* Light gray text for links and body */
+  font-size: 1.1em; /* Readable text size */
+  margin: 5px 0; /* Space between elements */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+footer .footer-item a:hover {
+  color: #ffeb3b; /* Bright yellow on hover */
+}
+
+/* Social Media Icons */
+footer .social-icons {
+  margin-top: 20px; /* Space above icons */
+}
+
+footer .social-icons a {
+  margin: 0 10px; /* Space between icons */
+  color: #ff9800; /* Bright orange color */
+  font-size: 1.6em; /* Large icon size */
+  transition: color 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+footer .social-icons a:hover {
+  color: #ffeb3b; /* Bright yellow on hover */
+}
+
+/* Footer Bottom */
+footer .footer-bottom {
+  border-top: 1px solid #444; /* Thin border on top */
+  margin-top: 40px; /* Space above bottom section */
+  padding-top: 20px; /* Padding for the bottom section */
+  color: #bbb; /* Light gray for the bottom text */
+  font-size: 0.9em; /* Slightly smaller text */
+}
+
+footer .footer-bottom a {
+  color: #ff9800; /* Bright orange for links */
+  text-decoration: none; /* No underline */
+  transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+footer .footer-bottom a:hover {
+  color: #ffeb3b; /* Bright yellow on hover */
+}
+/*--------------------------------*/
+
 @media (max-width: 768px) {
   .intro, .offer-content {
       flex-direction: column;
@@ -351,5 +555,55 @@ footer {
 
   #about .about-subsection p {
     font-size: 1em; /* Slightly smaller paragraph text */
+  }
+
+  #offer h2 {
+    font-size: 2.2em; /* Smaller heading size for mobile */
+  }
+
+  #offer p {
+    font-size: 1.1em; /* Slightly smaller paragraph text */
+  }
+
+  .offer-items {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .offer-item {
+    width: 90%; /* Full width for mobile devices */
+    margin: 10px 0; /* Space between stacked items */
+  }
+
+  .offer-images img {
+    width: 100%; /* Full width for images on mobile */
+  }
+
+  #contact h2 {
+    font-size: 2.2em; /* Smaller heading size for mobile */
+  }
+
+  #contact p {
+    font-size: 1.1em; /* Slightly smaller paragraph text */
+  }
+
+  .contact-info {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .contact-item {
+    width: 90%; /* Full width for mobile devices */
+    margin: 10px 0; /* Space between stacked items */
+  }
+
+  footer .footer-content {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center-align items */
+  }
+
+  footer .footer-item {
+    max-width: 100%; /* Full width for small screens */
+    text-align: center; /* Center text for better alignment */
   }
 }
