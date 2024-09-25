@@ -1,181 +1,609 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+header {
+  background-color: #ff9800;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+.container {
+  width: 100%;
+  margin: auto;
+}
+.intro {
+  background-color: #333; /* Dark background */
+  color: #fff;            /* White text for contrast */
+  padding: 50px 0;        /* Adds spacing to the section */
+  text-align: center;     /* Centers the text */
+  position: relative;     /* Allows positioning of overlay elements */
+}
+/* YouTube Video Section Styling */
+.intro-video {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio for video */
+  margin: 20px auto;
+  width: 80%;          /* Adjusts the width of the video container */
+  max-width: 800px;    /* Sets a maximum width for large screens */
+  overflow: hidden;
+  border-radius: 8px;  /* Rounded corners for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+}
+/* Responsive Intro-Text and Intro-Video */
+.intro-text {
+  margin-bottom: 30px; /* Adds spacing between text and video */
+  padding: 0 20px;     /* Add padding for small screens */
+  line-height: 1.6;    /* Improved readability */
+}
+.intro-text p {
+  font-size: 1.2em;    /* Slightly larger font size for desktop */
+  margin-bottom: 20px; /* Adds space under the paragraph */
+}
+.intro-text h2 {
+  font-size: 2.5em;
+  color: #ff9800;
+}
+.intro-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;        /* Ensures the video fills the entire container */
+  height: 100%;       /* Ensures the video fills the entire container */
+  border: none;       /* Removes the iframe border */
+}
+/* Attractive Button Style */
+.intro-text button {
+  background-color: #ff9800; /* Bright orange button */
+  color: #fff;               /* White text */
+  border: none;
+  padding: 15px 30px;        /* Spacing inside the button */
+  font-size: 1.2em;          /* Makes the text bigger */
+  border-radius: 25px;       /* Fully rounded corners */
+  cursor: pointer;           /* Hand cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  margin-top: 20px;          /* Adds space above the button */
+  margin-bottom: 20px;
+}
 
-  header {
-    background-color: #f8f8f8;
-    padding: 1rem;
-    position: relative;
-  }
+.intro-text button:hover {
+  background-color: #e67e22; /* Darker shade on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
 
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+/*-------------------------------*/
+/* #about Section Styles */
+/* #about Section Styles */
+#about {
+  background-color: #f5f5f5; /* Soft light gray background for subtle contrast */
+  padding: 70px 0; /* Spacing around the section */
+  text-align: center; /* Center-align all content */
+  color: #333; /* Darker text color for readability */
+}
 
-  .site-title {
-    font-size: 1.8rem;
-    color: #333;
-  }
+#about h2 {
+  font-size: 2.8em; /* Larger heading */
+  color: #ff9800; /* Bright orange to match school colors */
+  margin-bottom: 30px; /* Space below the heading */
+  font-weight: bold; /* Strong heading for emphasis */
+}
 
-  nav {
-    display: flex;
-  }
+#about p {
+  font-size: 1.2em; /* Larger text for better readability */
+  color: #555; /* Softer gray text */
+  max-width: 800px; /* Prevents text from stretching too wide */
+  margin: 0 auto 40px; /* Centers text and adds space */
+  line-height: 1.7; /* Improves text readability */
+}
 
-  .main-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-  }
+/* Sub-sections (Vision, Mission, Values) */
+#about .about-subsection {
+  margin-bottom: 50px; /* Adds spacing between subsections */
+}
 
-  .main-menu li {
-    position: relative;
-  }
+#about .about-subsection h3 {
+  font-size: 1.8em; /* Slightly smaller subheadings */
+  color: #ff9800; /* Complementary orange */
+  margin-bottom: 20px;
+  font-weight: 600; /* Semi-bold for subheadings */
+}
 
-  .main-menu a {
-    text-decoration: none;
-    color: #333;
-    padding: 0.5rem 1rem;
-    display: block;
-  }
+#about .about-subsection p {
+  font-size: 1.1em;
+  color: #666; /* Dark gray for easy reading */
+  line-height: 1.6; /* Makes text more readable */
+  max-width: 750px;
+  margin: 0 auto; /* Centers the text in each subsection */
+}
 
-  .main-menu a:hover, .main-menu a:focus {
-    background-color: #e0e0e0;
-  }
+/* Values Section - Cards Layout */
+#about .about-values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Adds spacing between the cards */
+  margin-top: 40px;
+}
 
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background-color: #f8f8f8;
-    list-style-type: none;
-    margin: 0;
-    padding: 0.5rem 0;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
+#about .about-value-item {
+  background-color: #fff; /* White background for contrast with gray */
+  border: 1px solid #eee; /* Soft border around the cards */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners for a modern look */
+  width: 300px; /* Card width for desktop screens */
+  text-align: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
 
-  .dropdown:hover .dropdown-menu,
-  .dropdown:focus-within .dropdown-menu {
-    display: block;
-  }
+#about .about-value-item:hover {
+  transform: translateY(-5px); /* Hover effect for slight lift */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
 
-  .dropdown-menu li a {
-    padding: 0.5rem 1rem;
-  }
+#about .about-value-item h4 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #ff9800; /* Bright orange color */
+  font-weight: 600; /* Bold subheadings */
+}
 
-  /* Mobile Menu Toggle */
-  .menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-  }
+#about .about-value-item p {
+  font-size: 1.05em;
+  color: #555; /* Subtle gray text */
+  line-height: 1.6;
+}
+/*-------------------------------*/
 
-  .menu-toggle.active {
-    content: '✖';
-  }
+/*-------------------------------*/
+/* Why Us Section Styles */
+#why-us {
+  background-color: #e0f7fa; /* Light bluish background that pairs well with orange */
+  padding: 80px 0; /* Generous padding for spacing */
+  text-align: center;
+  color: #333; /* Dark text for readability */
+}
 
-  .main-menu.mobile-active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #f8f8f8;
-    transform: translateY(-10px);
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-  }
+#why-us h2 {
+  font-size: 2.8em; /* Large and attention-grabbing */
+  color: #ff9800; /* Bright orange for headings */
+  margin-bottom: 30px; /* Space below the heading */
+  font-weight: bold; /* Strong emphasis */
+}
 
-  .main-menu.mobile-active.show {
-    transform: translateY(0);
-    opacity: 1;
-  }
+#why-us p {
+  font-size: 1.2em; /* Larger body text */
+  color: #555; /* Softer gray for readable text */
+  max-width: 900px;
+  margin: 0 auto 50px; /* Centering text and spacing */
+  line-height: 1.8; /* Improved readability */
+}
 
-  @media (max-width: 768px) {
-    .header-container {
-      /*flex-direction: column;
-      align-items: flex-start;*/
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
+/* Sub-sections (What We Offer, Transport, Menu) */
+#why-us .why-us-subsection {
+  margin-bottom: 60px; /* Spacing between sections */
+}
 
-    .main-menu {
-      display: none;
+#why-us .why-us-subsection h3 {
+  font-size: 1.8em; /* Subheadings slightly smaller */
+  color: #00796b; /* Darker teal for a balanced, bluish tone */
+  margin-bottom: 20px;
+  font-weight: 600; /* Semi-bold for emphasis */
+}
+
+#why-us .why-us-subsection p {
+  font-size: 1.1em;
+  color: #666; /* Subtle gray for readability */
+  max-width: 800px;
+  margin: 0 auto; /* Center text */
+  line-height: 1.7;
+}
+
+/* Icon or Image Section (Optional) */
+#why-us .why-us-icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+#why-us .icon-box {
+  background-color: #fff; /* White background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#why-us .icon-box:hover {
+  transform: translateY(-5px); /* Hover effect for interactivity */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+#why-us .icon-box h4 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #ff9800; /* Bright orange for headings */
+  font-weight: 600;
+}
+
+#why-us .icon-box p {
+  font-size: 1.05em;
+  color: #555; /* Soft gray text */
+  line-height: 1.6;
+}
+/*-------------------------------*/
+
+/*-------------------------------*/
+/* Offer Section Styles */
+#offer {
+  background-color: #f9f5e1; /* Light beige background that integrates well with orange */
+  padding: 80px 20px; /* Generous padding for spacing */
+  text-align: center; /* Center-align all content */
+  color: #333; /* Darker text color for readability */
+}
+
+#offer h2 {
+  font-size: 2.8em; /* Large heading */
+  color: #ff9800; /* Bright orange for headings */
+  margin-bottom: 30px; /* Space below the heading */
+  font-weight: bold; /* Strong heading for emphasis */
+}
+
+#offer p {
+  font-size: 1.2em; /* Larger text for better readability */
+  color: #555; /* Softer gray for body text */
+  max-width: 900px; /* Prevents text from stretching too wide */
+  margin: 0 auto 50px; /* Centers text and adds space */
+  line-height: 1.7; /* Improves text readability */
+}
+
+/* Flexbox Layout for Offer Items */
+.offer-items {
+  display: flex;
+  justify-content: space-around; /* Space between items */
+  flex-wrap: wrap; /* Wrap items to next line */
+  max-width: 1200px; /* Maximum width for the layout */
+  margin: 0 auto; /* Centering the items */
+}
+
+/* Individual Offer Item Styles */
+.offer-item {
+  background-color: #fff; /* White background for contrast */
+  border: 1px solid #e0e0e0; /* Soft border around items */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  padding: 30px; /* Internal spacing */
+  margin: 20px; /* Space around each item */
+  flex: 1; /* Allow items to grow */
+  max-width: 300px; /* Maximum width for each item */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animation on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.offer-item:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.offer-item h3 {
+  font-size: 1.6em; /* Subheading size */
+  color: #ff9800; /* Bright orange for headings */
+  margin-bottom: 15px; /* Space below heading */
+  font-weight: bold; /* Strong emphasis */
+}
+
+.offer-item p {
+  font-size: 1.05em; /* Body text size */
+  color: #555; /* Soft gray text */
+  line-height: 1.6; /* Improved readability */
+}
+
+/* Images Area */
+.offer-images {
+  display: flex;
+  justify-content: center; /* Center the images */
+  flex-wrap: wrap; /* Allow images to wrap */
+  margin-top: 40px; /* Space above images area */
+}
+
+.offer-images img {
+  width: 250px; /* Fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px; /* Space around images */
+  border-radius: 8px; /* Rounded corners for images */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for images */
+}
+/*-------------------------------*/
+
+/*--------------------------------*/
+/* Contact Section Styles */
+#contact {
+  background-color: #f0f4f8; /* Light gray background that integrates well with yellow */
+  padding: 80px 20px; /* Generous padding for spacing */
+  text-align: center; /* Center-align all content */
+  color: #333; /* Darker text color for readability */
+}
+
+#contact h2 {
+  font-size: 2.8em; /* Large heading */
+  color: #ffeb3b; /* Bright yellow for headings */
+  margin-bottom: 30px; /* Space below the heading */
+  font-weight: bold; /* Strong heading for emphasis */
+}
+
+#contact p {
+  font-size: 1.2em; /* Larger text for better readability */
+  color: #555; /* Softer gray for body text */
+  max-width: 900px; /* Prevents text from stretching too wide */
+  margin: 0 auto 50px; /* Centers text and adds space */
+  line-height: 1.7; /* Improves text readability */
+}
+
+/* Contact Info Styles */
+.contact-info {
+  display: flex;
+  justify-content: space-around; /* Space between items */
+  flex-wrap: wrap; /* Allow items to wrap */
+  max-width: 1200px; /* Maximum width for the layout */
+  margin: 0 auto; /* Centering the items */
+}
+
+.contact-item {
+  background-color: #fff; /* White background for contrast */
+  border: 1px solid #e0e0e0; /* Soft border around items */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  padding: 30px; /* Internal spacing */
+  margin: 20px; /* Space around each item */
+  flex: 1; /* Allow items to grow */
+  max-width: 300px; /* Maximum width for each item */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animation on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.contact-item:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.contact-item h3 {
+  font-size: 1.6em; /* Subheading size */
+  color: #ffeb3b; /* Bright yellow for headings */
+  margin-bottom: 15px; /* Space below heading */
+  font-weight: bold; /* Strong emphasis */
+}
+
+.contact-item p {
+  font-size: 1.05em; /* Body text size */
+  color: #555; /* Soft gray text */
+  line-height: 1.6; /* Improved readability */
+}
+/*--------------------------------*/
+
+/*--------------------------------*/
+/* Footer Styles */
+footer {
+  background-color: #2c2c2c; /* Dark background for contrast */
+  padding: 60px 20px; /* Generous padding for spacing */
+  color: #fff; /* White text for readability */
+  text-align: center; /* Center-align the text */
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-around; /* Space items across the footer */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  max-width: 1200px; /* Maximum width to prevent stretching */
+  margin: 0 auto; /* Center the content */
+}
+
+footer .footer-item {
+  margin: 20px 0; /* Space between footer items */
+  flex: 1; /* Make items flexible */
+  min-width: 200px; /* Minimum width for smaller screens */
+}
+
+footer .footer-item h4 {
+  font-size: 1.5em; /* Larger heading size */
+  color: #ff9800; /* Bright orange for headings */
+  margin-bottom: 20px; /* Space below headings */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+footer .footer-item p,
+footer .footer-item a {
+  color: #ddd; /* Light gray text for links and body */
+  font-size: 1.1em; /* Readable text size */
+  margin: 5px 0; /* Space between elements */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+footer .footer-item a:hover {
+  color: #ffeb3b; /* Bright yellow on hover */
+}
+
+/* Social Media Icons */
+footer .social-icons {
+  margin-top: 20px; /* Space above icons */
+}
+
+footer .social-icons a {
+  margin: 0 10px; /* Space between icons */
+  color: #ff9800; /* Bright orange color */
+  font-size: 1.6em; /* Large icon size */
+  transition: color 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+footer .social-icons a:hover {
+  color: #ffeb3b; /* Bright yellow on hover */
+}
+
+/* Footer Bottom */
+footer .footer-bottom {
+  border-top: 1px solid #444; /* Thin border on top */
+  margin-top: 40px; /* Space above bottom section */
+  padding-top: 20px; /* Padding for the bottom section */
+  color: #bbb; /* Light gray for the bottom text */
+  font-size: 0.9em; /* Slightly smaller text */
+}
+
+footer .footer-bottom a {
+  color: #ff9800; /* Bright orange for links */
+  text-decoration: none; /* No underline */
+  transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+footer .footer-bottom a:hover {
+  color: #ffeb3b; /* Bright yellow on hover */
+}
+/*--------------------------------*/
+
+@media (max-width: 768px) {
+  .intro, .offer-content {
       flex-direction: column;
-      gap: 0;
+  }
+  .intro-text {
+      margin-bottom: 20px;
+  }
+  .offer-content article {
       width: 100%;
-    }
-
-    .main-menu li {
-      width: 100%;
-    }
-
-    .main-menu a {
-      padding: 1rem;
-      width: 100%;
-      text-align: left;
-    }
-
-    .dropdown-menu {
-      position: static;
-      box-shadow: none;
-    }
-
-    .menu-toggle {
-      display: block;
-      margin-left: auto;
-    }
-    /* Staggered Animation Delays */
-    .main-menu.show li:nth-child(1) {
-        transition-delay: 0.1s;
-    }
+      margin-bottom: 20px;
+  }
+  .intro {
+    padding: 30px 0; /* Reduced padding for smaller screens */
   }
 
-  @media (max-width: 480px) {
-    .site-title {
-      font-size: 1.5rem;
-    }
-
-    .main-menu a {
-      padding: 0.75rem 1rem;
-    }
-
+  .intro-text h2 {
+    font-size: 1.8em; /* Smaller font size for headings on mobile */
   }
 
-  /* YouTube Video and Under Construction Styling */
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background-color: #000;
-    margin: 2rem auto 1rem;
+  .intro-text p {
+    font-size: 1em;   /* Reduce paragraph font size for mobile */
   }
 
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  .intro-video {
+    width: 100%;      /* Full width of the screen on mobile */
+    padding-top: 56.25%; /* Keeps the 16:9 ratio for the video */
+    max-width: none;   /* Removes max width so it can scale to full screen width */
+    border-radius: 0;  /* Remove the rounded corners on smaller devices for a simpler look */
+    box-shadow: none;  /* Remove shadow for a cleaner mobile design */
   }
 
-  .under-construction {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #d9534f;
-    margin-bottom: 2rem;
+  .intro-text button {
+    font-size: 1em;    /* Slightly smaller button text */
+    padding: 10px 20px; /* Reduce padding to fit smaller screens */
+    margin-top: 15px;   /* Adjust margin for better spacing */
   }
+
+  #why-us h2 {
+    font-size: 2.2em; /* Smaller heading for mobile */
+  }
+
+  #why-us p {
+    font-size: 1.1em; /* Smaller text for mobile */
+  }
+
+  #why-us .why-us-icons {
+    flex-direction: column; /* Stack icons vertically */
+    gap: 20px; /* Smaller gap between elements */
+  }
+
+  #why-us .icon-box {
+    width: 90%; /* Full width on smaller screens */
+  }
+
+
+  #about h2 {
+    font-size: 2.2em; /* Reduce heading size for smaller screens */
+  }
+
+  #about p {
+    font-size: 1.1em; /* Slightly smaller paragraph text */
+  }
+
+  #about .about-values {
+    flex-direction: column; /* Stack value cards vertically */
+    gap: 20px; /* Smaller gap between stacked cards */
+  }
+
+  #about .about-value-item {
+    width: 90%; /* Full width for mobile devices */
+  }
+
+  #about .about-subsection h3 {
+    font-size: 1.6em; /* Smaller subheadings */
+  }
+
+  #about .about-subsection p {
+    font-size: 1em; /* Slightly smaller paragraph text */
+  }
+
+  #offer h2 {
+    font-size: 2.2em; /* Smaller heading size for mobile */
+  }
+
+  #offer p {
+    font-size: 1.1em; /* Slightly smaller paragraph text */
+  }
+
+  .offer-items {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .offer-item {
+    width: 90%; /* Full width for mobile devices */
+    margin: 10px 0; /* Space between stacked items */
+  }
+
+  .offer-images img {
+    width: 100%; /* Full width for images on mobile */
+  }
+
+  #contact h2 {
+    font-size: 2.2em; /* Smaller heading size for mobile */
+  }
+
+  #contact p {
+    font-size: 1.1em; /* Slightly smaller paragraph text */
+  }
+
+  .contact-info {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .contact-item {
+    width: 90%; /* Full width for mobile devices */
+    margin: 10px 0; /* Space between stacked items */
+  }
+
+  footer .footer-content {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center-align items */
+  }
+
+  footer .footer-item {
+    max-width: 100%; /* Full width for small screens */
+    text-align: center; /* Center text for better alignment */
+  }
+}
